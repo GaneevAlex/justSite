@@ -1,0 +1,151 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Main</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <nav>
+                            <ul class="menu clearfix">
+                                <li class="menu__item">
+                                    <a href="index.html">Главная</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" data-toggle="modal" data-target="#signup__modal">Регистрация</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" data-toggle="modal" data-target="#login__modal">Вход</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="users.html">Пользователи</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__main">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1>
+                            Мультистраничное приложение
+                        </h1>
+                        <h2>
+                            Приветствует Вас
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="pictures text-center" id="pictures">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="pictures__header">Наши картинки с подписями</h2>
+                </div>
+            </div>
+            <ul class="pictures__list">
+                <div class="row">
+                    <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg">
+                        <li class="pictures__item">
+                            <div class="pictures__image pictures__image_first"></div>
+                            <h3 class="pictures__title">Picture 1</h3>
+                            <p class="pictures__text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam
+                            </p>
+                        </li>
+                    </div>
+                    <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg">
+                        <li class="pictures__item">
+                            <div class="pictures__image pictures__image_second"></div>
+                            <h3 class="pictures__title">Picture 2</h3>
+                            <p class="pictures__text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor
+                            </p>
+                        </li>
+                    </div>
+                    <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg">
+                        <li class="pictures__item">
+                            <div class="pictures__image pictures__image_third"></div>
+                            <h3 class="pictures__title">Picture 3</h3>
+                            <p class="pictures__text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </li>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="video text-center">
+        <div class="content">
+            <div class="row">
+                <div class="col">
+                    <h2 class="video__header">
+                        Видео
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/UoKlKx-3FcA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="login text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="login__header">
+                        <h2>
+                            Хотите войти или зарегистироваться?
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="button button_wide" data-toggle="modal" data-target="#signup__modal">Кнопка регистрации</div>
+                </div>
+                <div class="col-6">
+                    <a href="#" class="button button_wide" data-toggle="modal" data-target="#login__modal">Кнопка входа</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 clearfix text-center">
+                    <div class="rights">
+                        2019/Все права защищены
+                    </div>
+                    <a class="confidential" href="#" data-toggle="modal" data-target="#confidential__modal">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <%= require('ejs-loader!./templates/modals.ejs')({htmlWebpackPlugin}) %>
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+</html>

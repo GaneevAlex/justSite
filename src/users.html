@@ -1,0 +1,64 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <nav>
+                            <ul class="menu clearfix">
+                                <li class="menu__item">
+                                    <a href="index.html">Главная</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" data-toggle="modal" data-target="#signup__modal">Регистрация</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" data-toggle="modal" data-target="#login__modal">Вход</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="users.html">Пользователи</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="users text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <div class="users__list text-left">
+                        <div class="row users__list_headers">
+                            <div class="name col-6 text-center">Имя</div>
+                            <div class="password col-6 text-center">Пароль</div>
+                        </div>
+                        <div class="row users__list_item">
+                            <div class="name col-6">Павел</div>
+                            <div class="password col-6">password</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 offset-3">
+                    <div class="button button_blue">Показать список</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%= require('ejs-loader!./templates/modals.ejs')({htmlWebpackPlugin}) %>
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+</html>

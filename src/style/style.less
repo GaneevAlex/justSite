@@ -1,0 +1,246 @@
+@import "fonts";
+
+/* Спецификация */
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Museo Sans Cyrl 300", sans-serif;
+    text-transform: uppercase;
+    overflow-x: hidden;
+}
+
+ul, li {
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+h1, h2, h3 {
+    font-family: "Museo Sans Cyrl 900";
+}
+
+* {
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+.button {
+    position: relative;
+    z-index: 2;
+    font-size: 1.5rem;
+    font-family: "Museo Sans Cyrl 900";
+    color: white;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        color: black;
+        text-decoration: none;
+    }
+
+    &:active {
+        transition: all 0s;
+        box-shadow: 0 0 20px rgba(7, 17, 34, 0.5) inset;
+        opacity: 0.7;
+    }
+
+    &.button_wide {
+        display: block;
+        padding: 2rem 2rem;
+    }
+
+    &.button_blue {
+        color: #0c3056;
+        border-color: #114c65;
+
+        &:hover {
+            color: white;
+            background-color: rgba(0, 52, 74, 0.51);
+        }
+    }
+
+    &.button_narrow {
+        padding: 20px;
+        width: 200px;
+        white-space: nowrap;
+    }
+}
+
+/* Шапка */
+.header {
+    background: #145c7f url("../images/header-bg.jpg") center center no-repeat;
+    background-size: cover;
+
+    /* Шапка меню */
+    .header__menu {
+        background-color: rgba(32, 81, 104, 0.6);
+    }
+
+    /* Шапка первый экран */
+    .header__main {
+        text-align: center;
+        color: white;
+        opacity: 0.9;
+    }
+
+    .header__main h1 {
+        font-size: 8rem;
+        letter-spacing: 1rem;
+        padding: 15rem 0 4rem;
+        margin: 0;
+    }
+
+    .header__main h2 {
+        font-size: 5rem;
+        letter-spacing: 1rem;
+        margin: 0px 0px 25px;
+    }
+}
+
+/* Menu */
+.menu {
+    margin-top: 1.0rem;
+
+    .menu__item {
+        float: left;
+    }
+
+    .menu__item a {
+        text-decoration: none;
+        font-family: "Museo Sans Cyrl 900";
+        font-size: 2rem;
+        color: white;
+        border-radius: 4px;
+        padding: 1.4rem;
+    }
+
+    .menu__item a:hover {
+        background-color: rgba(79, 132, 157, 0.5);
+        color: white;
+        text-decoration: none;
+    }
+}
+
+/* Наши картинки */
+.pictures {
+    padding: 8.5rem 0 10rem;
+
+    .pictures__header {
+        font-size: 4.2rem;
+        margin-bottom: 7rem;
+    }
+
+    .pictures__item {
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+        padding: 6rem 0rem 3rem;
+        background: #f4f4f4;
+
+        .pictures__image {
+            height: 100px;
+
+            &.pictures__image_first {
+                background: url("../images/first.png") center center no-repeat;
+            }
+
+            &.pictures__image_second {
+                background: url("../images/second.png") center center no-repeat;
+            }
+
+            &.pictures__image_third {
+                background: url("../images/third.png") center center no-repeat;
+            }
+        }
+
+        .pictures__title {
+            font-size: 2rem;
+            margin: 0;
+
+            &:after {
+                content: "";
+                margin: 0.5rem auto 1rem;
+                display: block;
+                width: 3rem;
+                height: 0.1rem;
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        .pictures__text {
+            font-size: 1.7rem;
+            height: 11rem;
+            text-transform: none;
+        }
+    }
+}
+
+/* Видео */
+.video {
+    background: #30485c url("../images/video-bg.jpg") center center no-repeat;
+    background-size: cover;
+    padding: 9rem 0;
+    color: white;
+
+    .video__header {
+        font-size: 4.2rem;
+        letter-spacing: 0.6rem;
+    }
+}
+
+/* Регистрация/вход */
+.login {
+    background: #06050b url("../images/login-bg.png");
+    color: white;
+    padding: 8rem 0;
+
+    .login__header {
+        margin-bottom: 7rem;
+
+        h2 {
+            font-size: 4.2rem;
+            margin-bottom: 2rem;
+            letter-spacing: 0.5rem;
+        }
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #06050b;
+    color: white;
+
+    .rights {
+        float: left;
+        font-size: 1.3rem;
+        text-transform: none;
+        padding: 2rem;
+    }
+
+    .confidential {
+        float: right;
+        color: white;
+        font-size: 1.4rem;
+        text-transform: none;
+        border-bottom: 1px dashed white;
+        margin-top: 2.0rem;
+        display: inline-block;
+
+        &:hover {
+            text-decoration: none;
+            color: #145c7f;
+            border-color: #145c7f;
+        }
+    }
+}
+
+@import "modal";
+@import "users";
+@import "responsive";

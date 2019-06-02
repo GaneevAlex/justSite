@@ -1,0 +1,43 @@
+/* Модальные окна */
+.modal {
+  .modal-title {
+    font-size: 3rem;
+    font-family: "Museo Sans Cyrl 900";
+  }
+
+  .modal-body {
+    padding: 2rem 5rem 5rem;
+
+    .modal-body_text {
+      font-size: 1.5rem;
+    }
+  }
+
+  .button {
+    text-align: center;
+  }
+}
+
+/*Forms*/
+.form input {
+  display: block;
+  font-size: 1.3rem;
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  border: 1px solid white;
+  background-color: #06050b;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  color: rgba(255, 255, 255, 0.5);
+  outline: none;
+
+  &:focus {
+    color: white;
+    box-shadow: 3px 2px 20px rgba(0, 0, 0, 0.3);
+
+    &::placeholder {
+      color: white;
+    }
+  }
+}
